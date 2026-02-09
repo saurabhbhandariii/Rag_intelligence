@@ -1,0 +1,23 @@
+streamlit>=1.31.0
+
+# Vector Database
+chromadb>=0.4.22
+
+# LLM + Embeddings (Local)
+ollama>=0.1.7
+
+# LangChain utilities
+langchain>=0.1.16
+langchain-community>=0.0.32
+langchain-text-splitters>=0.0.1
+langchain-core>=0.1.45
+
+# PDF processing
+pymupdf>=1.23.7
+
+# Re-ranking
+sentence-transformers>=2.2.2
+torch>=2.0.0
+
+# Utilities
+numpy>=1.24.0
