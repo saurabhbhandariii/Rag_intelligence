@@ -61,61 +61,63 @@ Answer Generation (Streaming)
 
 ---
 
-## 📦 Installation
 
-### 1️⃣ Clone the repository
-```bash
-git clone https://github.com/saurabhbhandariii/production-rag-streamlit.git
-cd production-rag-streamlit
-2️⃣ Create virtual environment
-python -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
-3️⃣ Install dependencies
-pip install -r requirements.txt
 🧠 Ollama Setup (Required)
+
 Install Ollama from:
 👉 https://ollama.com
 
 Start Ollama:
 
 ollama serve
+
+
 Pull required models:
 
 ollama pull llama3.2:3b
 ollama pull nomic-embed-text
+
 ▶️ Run the Application
 streamlit run app.py
+
+
 Open in browser:
 
 http://localhost:8501
+
 🧪 How the RAG Pipeline Works
 1. Document Ingestion
+
 PDFs loaded using PyMuPDF
 
 Chunked using recursive text splitting
 
 2. Embedding & Storage
+
 Each chunk embedded locally using Ollama
 
 Stored in persistent ChromaDB
 
 3. Query Rewrite
+
 Converts follow-up questions into standalone queries
 
 Uses conversation history
 
 4. Retrieval
+
 Vector similarity search
 
 Distance threshold filtering
 
 5. Re-Ranking
+
 Cross-encoder ranks top relevant chunks
 
 Improves answer precision
 
 6. Answer Generation
+
 Injects:
 
 System prompt
@@ -127,6 +129,7 @@ Retrieved context
 Model answers only from provided context
 
 🔐 Grounding Rules
+
 The system prompt enforces:
 
 ❌ No hallucinations
@@ -136,3 +139,7 @@ The system prompt enforces:
 ✅ Answers only from retrieved documents
 
 ✅ Clear fallback when info is missing
+
+
+
+
